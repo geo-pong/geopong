@@ -1,0 +1,13 @@
+.main-field{
+  height: 100%;
+  width: 100%;
+  background-color: green;
+}
+#paddle-left{
+  height: 160px;
+  width: 18px;
+  border-radius: 30px;
+  background-color: white;
+  position: fixed;
+  margin-left: 50px;
+}
