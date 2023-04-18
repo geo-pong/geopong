@@ -10,7 +10,6 @@ interface userController {
 }
 
 // create user in db
-
 const userController: userController = {
   createUser: async (req, res, next) => {
     try {
