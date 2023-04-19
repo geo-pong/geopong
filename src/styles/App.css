@@ -1,13 +1,15 @@
-.App{
+.App {
   height: 100vh;
   width: 100vw;
 }
-.scoreboard-wrapper{
-width: 100vw;
-height: 10vh;
+
+.scoreboard-wrapper {
+  width: 100vw;
+  height: 10vh;
 }
-.playing-field-wrapper{
-width: 100vw;
-height: 90vh;
-background-color: black;
+
+.playing-field-wrapper {
+  width: 100vw;
+  height: 90vh;
+  background-color: black;
 }
