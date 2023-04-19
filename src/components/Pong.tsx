@@ -190,7 +190,11 @@ const Pong: React.FC = () => {
     }
   }, [width, height]);
     
-  return <canvas ref={canvasRef} width={width} height={height} />
+  return (
+    <div className="app">
+      <canvas ref={canvasRef} width={width} height={height} />
+    </div>
+  );
 };
 
 export default Pong;

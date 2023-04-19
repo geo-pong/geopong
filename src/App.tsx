@@ -1,11 +1,15 @@
-import './styles/App.css'
+import { Route, Routes } from 'react-router-dom';
+
 import Pong from './components/Pong'
+import Login from './components/Login'
+import './styles/App.css'
 
 function App() {
   return (
-    <div className="App">
-      <Pong />
-    </div>
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/Pong" element={<Pong />} />
+    </Routes>
   )
 }
 
