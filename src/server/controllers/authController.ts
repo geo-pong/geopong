@@ -3,12 +3,6 @@ import { Pool } from 'pg';
 import dotenv from 'dotenv';
 dotenv.config();
 
-interface authController: {
-  :RequestHandler;
-}
-
-const authController: authController = {
-
-}
+const authController = {};
 
 export default authController;

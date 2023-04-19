@@ -8,19 +8,31 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // create user in db
-app.post('/createUser', userController.createUser, (req, res) => {
-  res.status(200).json(res.locals.newUser);
-});
+app.post(
+  '/createUser',
+  userController.createUser,
+  (req: Request, res: Response) => {
+    res.status(200).json(res.locals.newUser);
+  }
+);
 
 // add users score in db
-app.post('/addUserScore/:id', userController.addUserScore, (req, res) => {
-  res.status(200).json(res.locals.userScore);
-});
+app.post(
+  '/addUserScore/:id',
+  userController.addUserScore,
+  (req: Request, res: Response) => {
+    res.status(200).json(res.locals.userScore);
+  }
+);
 
 // get all scores from db
-app.get('/getAllScores', userController.getAllScores, (req, res) => {
-  res.status(200).json(res.locals.allScores);
-});
+app.get(
+  '/getAllScores',
+  userController.getAllScores,
+  (req: Request, res: Response) => {
+    res.status(200).json(res.locals.allScores);
+  }
+);
 
 // Catch all 404
 app.use('/', (req: Request, res: Response) => {
