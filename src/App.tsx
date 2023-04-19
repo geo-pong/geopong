@@ -16,7 +16,7 @@ function App() {
         <PlayingField />
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
