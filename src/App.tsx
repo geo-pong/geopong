@@ -1,16 +1,22 @@
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import Pong from './components/Pong'
-import Login from './components/Login'
-import './styles/App.css'
+import Login from './components/Login';
+import Pong from './components/Pong';
+import PrivateRoute from './components/PrivateRoute';
+import './styles/App.css';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Login />} />
-      <Route path="/Pong" element={<Pong />} />
-    </Routes>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/Pong" element={<PrivateRoute />} >
+          <Route index element={<Pong />} />
+        </Route>
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
+

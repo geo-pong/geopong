@@ -3,7 +3,7 @@
   width: 100vw;
 }
 
-.scoreboard-wrapper {
+/* .scoreboard-wrapper {
   width: 100vw;
   height: 10vh;
 }
@@ -11,5 +11,17 @@
 .playing-field-wrapper {
   width: 100vw;
   height: 90vh;
-  background-color: black;
+  background-color: #1d1e22;
+} */
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login {
+  text-align: center;
+  margin: auto;
 }

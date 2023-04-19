@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from './AuthProvider';
 
 declare const google: any;
 
 const Login = () => {
   const navigate = useNavigate();
+  const [authState, setAuthState] = useAuth();
 
-  const handleLogin = (response:gapi.auth2.GoogleUser) => {
-    // const credential = response.credential;
-    const id_token = response.getAuthResponse().id_token;
+  const handleLogin = (response: any) => {
+    setAuthState({ jwt: response.credential });
     navigate('/Pong');
   }
 
@@ -20,15 +21,17 @@ const Login = () => {
     })
 
     google.accounts.id.renderButton(
-      document.getElementById('sign-in-div'),
+      document.getElementById('sign-in-button-div'),
       { theme: 'outline', size: 'large'}
     );
   }, []);
 
   return (
-    <div className="login">
-      <h1>Login</h1>
-      <button onClick={handleLogin}>Login</button>
+    <div className="login-container">
+      <div className="login">
+        <h1>Login</h1>
+        <div id="sign-in-button-div"></div>
+      </div>
     </div>
   )
 }

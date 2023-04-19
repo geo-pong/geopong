@@ -28,7 +28,7 @@ const Pong: React.FC = () => {
     // Game variables
     const paddleHeight = 100;
     const paddleWidth = 10;
-    const aiSpeed = 3;
+    const aiSpeed = 6;
     let animationFrame: number;
     let ballX = width / 2;
     let ballY = height / 2;
@@ -101,7 +101,7 @@ const Pong: React.FC = () => {
     const draw = () => {
       // Clear the canvas
       ctx.clearRect(0, 0, width, height);
-      ctx.fillStyle = 'black';
+      ctx.fillStyle = '#101010'; // background color
       ctx.fillRect(0, 0, width, height);
 
       // Draw paddles
