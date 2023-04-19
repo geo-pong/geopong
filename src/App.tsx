@@ -1,23 +1,20 @@
-import { useState } from 'react';
-import './App.css';
+import React from 'react'
+import { useState } from 'react'
+import './styles/App.css'
+import PlayingField from './components/PlayingField'
+import Scoreboard from './components/Scoreboard'
 
 function App() {
-  const [count, setCount] = useState(0);
+  
 
   return (
     <div className="App">
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+      <div className='scoreboard-wrapper'>
+        <Scoreboard />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div className='playing-field-wrapper'>
+        <PlayingField />
+      </div>
     </div>
   );
 }
