@@ -1,13 +1,21 @@
 .main-field{
   height: 100%;
   width: 100%;
-  background-color: green;
+  background-color: darkslateblue;
 }
 #paddle-left{
   height: 160px;
   width: 18px;
   border-radius: 30px;
   background-color: white;
-  position: fixed;
+  position: absolute;
   margin-left: 50px;
+}
+
+#ball{
+  height: 15px;
+  width: 15px;
+  border-radius: 15px;
+  background-color: white;
+  position: absolute;
 }

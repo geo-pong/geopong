@@ -1,22 +1,22 @@
-import React from 'react'
-import { useState } from 'react'
-import './styles/App.css'
-import PlayingField from './components/PlayingField'
-import Scoreboard from './components/Scoreboard'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import Login from './components/Login';
+import Pong from './components/Pong';
+import PrivateRoute from './components/PrivateRoute';
+import './styles/App.css';
 
 function App() {
-  
-
   return (
-    <div className="App">
-      <div className='scoreboard-wrapper'>
-        <Scoreboard />
-      </div>
-      <div className='playing-field-wrapper'>
-        <PlayingField />
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/Pong" element={<PrivateRoute />} >
+          <Route index element={<Pong />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
+
