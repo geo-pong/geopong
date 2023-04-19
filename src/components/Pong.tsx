@@ -110,7 +110,7 @@ const Pong: React.FC = () => {
       ctx.fillRect(width - 20, paddle2Y, paddleWidth, paddleHeight);
 
       // Draw divider
-      drawVerticalDivider(ctx);
+      drawVerticalDivider();
 
       // Draw scoreboard
       drawScoreboard(player1Score, player2Score);
